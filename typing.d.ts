@@ -1,19 +1,19 @@
 export type Post = {
-  _id: Atring
-  publishedAt: String
-  title: String
+  _id: string
+  publishedAt: string
+  title: string
   author: {
     name: string
-    image: String
+    image: string
   }
-  description: String
+  description: string
   mainImage: {
     asset: {
-      url: String
+      url: string
     }
   }
   slug: {
     current: string
   }
-  body: [boject]
+  body: [object]
 }

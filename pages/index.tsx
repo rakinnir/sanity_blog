@@ -10,11 +10,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 type Props = {
-  posts: [Post]
+  posts: Post[]
 }
 
 export default function Home({ posts }: Props) {
-  console.log(posts)
   return (
     <div>
       <Head>
@@ -30,7 +29,7 @@ export default function Home({ posts }: Props) {
         </div>
         <div className="grid grid-cols-1 gap-3 px-4 py-6 mx-auto md:grid-cols-2 lg:grid-cols-3 md:gap-6 max-w-7xl ">
           {posts.map((post) => (
-            <Link key={post._id} href={`/post/${post.slug.current}`}>
+            <Link key={post._id} href={`/postDetails/${post.slug.current}`}>
               <div className="border-[1px] border-secondaryColor border-opacity-40 h-[450px] group ">
                 <div className="w-full overflow-hidden h-3/5 ">
                   <Image
