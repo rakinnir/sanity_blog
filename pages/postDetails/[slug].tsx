@@ -20,6 +20,7 @@ type Input = {
 }
 
 const PostDetails = ({ post }: Props) => {
+  console.log(post.comments)
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
@@ -169,6 +170,18 @@ const PostDetails = ({ post }: Props) => {
               submit
             </button>
           </form>
+          <div>
+            <h3 className="text-3xl font-semibold font-titleFont">Comments</h3>
+            <hr />
+            {post.comments.map((comment) => (
+              <div key={comment._id}>
+                <p>
+                  <span className="text-secondaryColor">{comment.name}</span>{" "}
+                  {comment.comment}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -203,6 +216,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     publishedAt,
     title,
     author ->{name,image,},
+    "comments":*[_type == "comment" && post._ref == ^._id && approved == true],
     description,
     mainImage,
     slug,
