@@ -40,10 +40,10 @@ function SamplePrevArrow(props: any) {
           <FaChevronLeft />
         </span>
         <span className="absolute transition-transform duration-500 translate-x-24 translate-y-0 group-hover:-translate-y-7">
-          Previous
+          previous
         </span>
         <span className="absolute transition-transform duration-500 translate-x-24 translate-y-7 group-hover:translate-y-0">
-          Previous
+          previous
         </span>
       </div>
     </div>
